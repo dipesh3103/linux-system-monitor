@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux System Monitor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <div>
+                <h1>Linux Monitor</h1>
+                <p>Ubuntu System Dashboard</p>
+            </div>
+            <span class="status">
+                <span class="dot"></span> System Online
+            </span>
+        </header>
+
+        <section class="system-info">
+            <div>
+                <small>HOSTNAME</small>
+                <h3 id="hostname">Loading...</h3>
+            </div>
+            <div>
+                <small>OPERATING SYSTEM</small>
+                <h3 id="os">Loading...</h3>
+            </div>
+            <div>
+                <small>UPTIME</small>
+                <h3 id="uptime">Loading...</h3>
+            </div>
+        </section>
+
+        <h2>Resource Usage</h2>
+
+        <section class="cards">
+
+            <div class="card">
+                <h3>CPU Usage</h3>
+                <div class="value" id="cpu">0%</div>
+                <div class="progress">
+                    <div id="cpu-bar" class="fill"></div>
+                </div>
+                <p>Processor utilization</p>
+            </div>
+
+            <div class="card">
+                <h3>Memory Usage</h3>
+                <div class="value" id="ram">0%</div>
+                <div class="progress">
+                    <div id="ram-bar" class="fill"></div>
+                </div>
+                <p id="ram-detail">0 GB / 0 GB</p>
+            </div>
+
+            <div class="card">
+                <h3>Disk Usage</h3>
+                <div class="value" id="disk">0%</div>
+                <div class="progress">
+                    <div id="disk-bar" class="fill"></div>
+                </div>
+                <p id="disk-detail">0 GB / 0 GB</p>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Built with Ubuntu WSL | Python | Flask</p>
+            <p id="updated">Waiting for system data...</p>
+        </footer>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
